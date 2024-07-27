@@ -15,12 +15,37 @@
 
     --text-color-primary: #F1F5F9;
     --text-color-secondary: #CBD5E1;
+
+    --font-family: 'Arquivo', sans-serif;
+
+    --h1: 800 2.4rem/135% var(--font-family);
+    --h2: 800 1.6rem/140% var(--font-family);
+    --h3: 800 1.4rem/140% var(--font-family);
+    --text-span: 600 1.4rem/145% var(--font-family);
+    --text: 400 1.6rem/140% var(--font-family);
+    --text-sm: 400 1.4rem/160% var(--font-family);
+
 }
 
 
 body {
-    font-size: 1.6rem;
+    font: var(--text);
     color: var(--text-color-primary);
 
     background-color: var(--bg-color);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    color: var(--brand-color-light);
+}
+
+h1,
+h2,
+h3 {
+    font: inherit;
 }
