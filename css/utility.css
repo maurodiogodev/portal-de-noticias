@@ -27,5 +27,5 @@
 }
 
 .text-sm {
-    font: var(--text);
+    font: var(--text-sm);
 }
