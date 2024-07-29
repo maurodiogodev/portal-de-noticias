@@ -99,6 +99,10 @@ section header {
     h3 {
         margin-block: 8px 4px;
     }
+
+    p {
+        color: var(--text-color-secundary);
+    }
 }
 
 aside {
