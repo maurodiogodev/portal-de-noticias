@@ -3,12 +3,12 @@ section header {
     padding-block: 1.2rem 2.4rem;
     font: var(--text-span);
 
-    a {
+    & a {
         justify-self: end;
         align-items: center;
         gap: 8px;
 
-        span {
+        & span {
             background-image: url(../assets/icons/ArrowRight.svg);
             width: 1.6rem;
             height: 1.6rem;
@@ -23,12 +23,12 @@ section header {
 #featured {
     grid-area: featured;
 
-    img {
+    & img {
         height: 100%;
         object-fit: cover;
     }
 
-    .card {
+    & .card {
         position: relative;
         border-radius: 4px;
         overflow: hidden;
@@ -43,7 +43,7 @@ section header {
                     #020617 100%);
         }
 
-        figcaption {
+        & figcaption {
             position: absolute;
             bottom: 0;
 
@@ -67,20 +67,20 @@ section header {
         grid-template-columns: repeat(4, 29.2rem);
     }
 
-    img {
+    & img {
         height: 16rem;
     }
 
-    figure {
+    & figure {
         position: relative;
 
-        .content-tag {
+        & .content-tag {
             position: absolute;
             top: 8px;
             left: 8px;
         }
 
-        p {
+        & p {
             margin-top: 8px;
             font-weight: 800;
         }
@@ -90,17 +90,17 @@ section header {
 #ai {
     grid-area: ai;
 
-    img {
+    & img {
         width: 17.6rem;
         aspect-ratio: 1/1;
         object-fit: cover;
     }
 
-    h3 {
+    & h3 {
         margin-block: 8px 4px;
     }
 
-    p {
+    & p {
         color: var(--text-color-secundary);
     }
 }
@@ -113,14 +113,77 @@ aside {
 
     margin-top: 3.6rem;
 
-    h3 {
+    & h3 {
         margin-top: 8px;
         font-family: "Archivo Black";
     }
 
-    img {
+    & img {
         width: 7.2rem;
         aspect-ratio: 1/1;
         object-fit: cover;
+    }
+}
+
+
+
+#ai,
+#more {
+    & header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        & h3 {
+            margin: 0;
+        }
+    }
+}
+
+@media (width <=375px) {
+
+    #featured,
+    #ai,
+    #more,
+    #featured>div,
+    #ai>div,
+    #more>div,
+    #weekly>div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #featured .highlight {
+        min-height: 34.2rem;
+    }
+
+    #weekly {
+
+        & img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    #ai {
+        & article {
+            & div:nth-child(2) {
+                grid-column-start: 1;
+
+                & img {
+                    width: 8rem;
+                    object-fit: cover;
+                }
+            }
+
+        }
+    }
+
+    .desktop-only {
+        display: none;
+    }
+
+    .mobile-only {
+        display: inline;
     }
 }
